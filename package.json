@@ -1,0 +1,25 @@
+{
+  "name": "cafe-kakapo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-reason/cafe-kakapo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-reason/cafe-kakapo/issues"
+  },
+  "homepage": "https://github.com/daniel-reason/cafe-kakapo#readme"
+}
