@@ -6,5 +6,17 @@ var routes = require('./routes')
 var fs = require('fs')
 
 var app = express()
-
 module.exports = app
+
+
+// Middleware
+app.engine('hbs', hbs({
+  extname: 'hbs',
+  defaultLayout: 'main'
+}))
+app.set('view engine', 'hbs')
+app.set('views', path.join(__dirname, 'views'))
+
+
+// Routes
+app.get('/menu', routes.menu)
