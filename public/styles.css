@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 logo-image {
 
   width: 100%;
@@ -5,10 +9,25 @@ logo-image {
 }
 
 h1 {
-  position: absolute;
+  text-align: center;
+
 }
 
 .menuItem {
-  width: 30%;
+  width: ;
+  position: relative;
+}
 
+img {
+  width:300px;
+  height:300px;
+}
+
+.fullMenu {
+  display: flex;
+}
+
+.container{
+  width: 80%;
+  margin: 0px auto;
 }
