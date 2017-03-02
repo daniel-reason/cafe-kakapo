@@ -17,3 +17,12 @@ app.set('views', path.join(__dirname, 'views'))
 
 // Routes
 app.get('/menu', routes.menu)
+
+app.get('/mainMenu', function(req, res){
+  res.sendFile('views/layouts/main.hbs')
+})
+
+
+// app.get('/form', function(req, res) {
+//   res.send("<form action='/form' method='post'> <input type='text' placeholder='Please place your order here' /> <input type = 'submit' value = 'Click here'/></form> ")
+// })
