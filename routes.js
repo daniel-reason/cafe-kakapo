@@ -1,4 +1,4 @@
-var db = require ('./db')
+var db = require ('./database/db')
 
 module.exports = {
   menu:menu
@@ -7,5 +7,5 @@ module.exports = {
 function menu (req, res) {
   var data = db.getMenuItems()
   data.showItems = req.query.showItems
-  res.render('menu' data)
+  res.render('menu', data)
 }
