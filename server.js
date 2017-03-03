@@ -16,3 +16,9 @@ app.engine('hbs', hbs({
   }))
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'views'))
+
+// Routes
+app.get('/menu', routes.menu)
+
+app.get('/orderConfirm', routes.orderConfirm)
+
