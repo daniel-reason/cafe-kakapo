@@ -1,4 +1,4 @@
-var fs = require ('../fs')
+// var fs = require ('/fs')
 
 module.exports = {
   menu:menu,
@@ -11,14 +11,31 @@ function menu (req, res) {
   res.render('menu', data)
 }
 
+
+
 var database = __dirname+'/database/orders.js'
+var menuItem = document.getElementsByClassName('menuItem')
+var itemName = ''
+var itemPrice = ''
+
+//add click event
+for (var i = 0; i < buttonArray.length; i++) {
+    buttonArray[i].addEventListener('click', getItemDetails);
+  }
+
+//get item details on click
+function getItemDetails(){
+  itemName = this.getAttribute('data-item')
+  itemPrice = this.getAttribute('data-price')
+  addItem()
+}
+
 
 
 //create variable that will store the orders array [name, price, quantity]
 var orderedItems = [ [ "sandwidge", 3.50, 1] ]
 
-//create click event for menu items that runs addItem function
-
+// read the orders file and assigns data to orderedItems
 function readFile(){
   fs.readFile(database, function(err,data){
     if (err) throw err
@@ -26,8 +43,11 @@ function readFile(){
   })
 }
 
+//create click event for menu items that runs addItem function
+
+
+
 function addItem(itemName, itemPrice){
-  readfile()
   if (orderedItems[0] == ""){
     orderedItems[0] = ([itemName,itemPrice])
   }else{
@@ -39,6 +59,7 @@ function addItem(itemName, itemPrice){
       }
     }
   }
+  // Write back to orders file.
   // fs.writeFile(file,data,callback)
   return orderedItems
 }
