@@ -14,8 +14,8 @@ h1 {
 }
 
 .menuItem {
-  width: ;
-  position: relative;
+  width: 25em;
+  display: inline-block;
 }
 
 img {
@@ -24,10 +24,10 @@ img {
 }
 
 .fullMenu {
-  display: flex;
+  display: flex-wrap;
 }
 
-.container{
+#pageContainer{
   width: 80%;
   margin: 0px auto;
 }
