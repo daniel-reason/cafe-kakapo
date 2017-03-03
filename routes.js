@@ -2,13 +2,18 @@
 
 module.exports = {
   menu:menu,
-  addItem:addItem
+  addItem:addItem,
+  orderConfirm: orderConfirm
+
 }
 
 function menu (req, res) {
-  var data = db.getMenuItems()
-  data.showItems = req.query.showItems
-  res.render('menu', data)
+  res.render('menu')
+}
+
+function orderConfirm (req, res) {
+  res.render('orderConfirm')
+  // res.redirect('/')
 }
 
 
