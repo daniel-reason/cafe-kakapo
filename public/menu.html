@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<div id="pageContainer">
   <header class="container">
   <div class="row">
     <div class="image-title">
@@ -23,40 +24,44 @@
   </div>
 </header>
 
-<div class="container">
-  <div class="fullMenu">
+  <div class="container">
+    <div class="fullMenu">
 
-    <div class="menuItem" id=coffee>Coffee
-    </div>
-    <div class="menuItem" id=tea>Tea
-    </div>
-    <div class="menuItem" id=hotChoc>Hot Choc
-    </div>
+      <div class="menuItem" id="coffee" data-item="coffee" data-price="3.49">
+       <button id="coffee"><img src="" alt ="Coffee"></button>
+      </div>
+      <div class="menuItem" id="tea" data-item="tea" data-price="1.99">
+        <button id="tea"><img src="" alt ="Tea"></button>
+      </div>
+      <div class="menuItem" id="hotChoc" data-item="hotChoc" data-price="499.99">
+        <button id="hotChoc"><img src="" alt ="Hot Chocolate"></button>
+      </div>
 
-    <div class="menuItem" id=muffin>Muffin
-    </div>
-    <div class="menuItem" id=sandwich>Sandwich
-    </div>
-    <div class="menuItem" id=soup>Soup
+      <div class="menuItem" id="muffin" data-item="muffin" data-price="4.49">
+        <button id="muffin"><img src="" alt ="Muffin"></button>
+      </div>
+      <div class="menuItem" id="sandwich" data-item="sandwich" data-price="6.99">
+        <button id="sandwich"><img src="" alt ="Sandwich"></button>
+      </div>
+      <div class="menuItem" id="soup" data-item="soup" data-price="8.99">
+        <button id="soup"><img src="" alt ="Soup"></button>
+      </div>
     </div>
 
     <form="info"> Additional Info:<br>
-      <input type="text" name="info">
+      <input type="text" id="infoInput" name="info" data-item="infoInput">
     </form>
 
     <div>
-      <form="subtotal">Subtotal
-      </form>
-      <form="submit">Submit
+      <p>Subtotal<br>
+        <input type="text" id="subtotal">
+      </p>
+      <button id="submit">Submit</button>
     </form>
     </div>
 
   </div>
 </div>
-
-
-
-
 </body>
 
 
