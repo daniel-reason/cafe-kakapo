@@ -1,38 +1,33 @@
-// var fs = require ('/fs')
-
-module.exports = {
-  menu:menu,
-  addItem:addItem,
-  orderConfirm: orderConfirm
-
-}
+// var fs = require('fs')
+//
+// module.exports = {
+//   menu:menu,
+//   addItem:addItem
+// }
 
 function menu (req, res) {
-  res.render('menu')
-}
-
-function orderConfirm (req, res) {
-  res.render('orderConfirm')
-  // res.redirect('/')
+  var data = db.getMenuItems()
+  data.showItems = req.query.showItems
+  res.render('menu', data)
 }
 
 
 
-var database = __dirname+'/database/orders.js'
+// var database = __dirname+'/database/orders.js'
 var menuItem = document.getElementsByClassName('menuItem')
 var itemName = ''
 var itemPrice = ''
 
 //add click event
-for (var i = 0; i < buttonArray.length; i++) {
-    buttonArray[i].addEventListener('click', getItemDetails);
+for (var i = 0; i < menuItem.length; i++) {
+    menuItem[i].addEventListener('click', getItemDetails);
   }
 
 //get item details on click
 function getItemDetails(){
   itemName = this.getAttribute('data-item')
   itemPrice = this.getAttribute('data-price')
-  addItem()
+  addItem(itemName, itemPrice)
 }
 
 
@@ -66,6 +61,7 @@ function addItem(itemName, itemPrice){
   }
   // Write back to orders file.
   // fs.writeFile(file,data,callback)
+  console.log(orderedItems);
   return orderedItems
 }
 
