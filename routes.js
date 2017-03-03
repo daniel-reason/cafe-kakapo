@@ -11,4 +11,5 @@ function menu (req, res) {
 
 function orderConfirm (req, res) {
   res.render('orderConfirm')
+  // res.redirect('/')
 }

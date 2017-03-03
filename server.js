@@ -19,8 +19,3 @@ app.set('views', path.join(__dirname, 'views'))
 app.get('/menu', routes.menu)
 
 app.get('/orderConfirm', routes.orderConfirm)
-
-
-app.get('/mainMenu', function(req, res){
-  res.sendFile('./database/db')
-})
