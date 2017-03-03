@@ -1,11 +1,14 @@
 var db = require ('./database/db')
 
 module.exports = {
-  menu:menu
+  menu:menu,
+  orderConfirm: orderConfirm
 }
 
 function menu (req, res) {
-  var data = db.getMenuItems()
-  data.showItems = req.query.showItems
-  res.render('menu', data)
+  res.render('menu')
+}
+
+function orderConfirm (req, res) {
+  res.render('orderConfirm')
 }
